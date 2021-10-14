@@ -1,0 +1,101 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://Scripts/KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Personaje/Principal/tile004.png" type="Texture" id=2]
+[ext_resource path="res://Personaje/Principal/tile017.png" type="Texture" id=3]
+[ext_resource path="res://Personaje/Principal/tile021.png" type="Texture" id=4]
+[ext_resource path="res://Personaje/Principal/tile042.png" type="Texture" id=5]
+[ext_resource path="res://Personaje/Principal/tile044.png" type="Texture" id=6]
+[ext_resource path="res://Personaje/Principal/tile039.png" type="Texture" id=7]
+[ext_resource path="res://Personaje/Principal/tile045.png" type="Texture" id=8]
+[ext_resource path="res://Personaje/Principal/tile020.png" type="Texture" id=9]
+[ext_resource path="res://Personaje/Principal/tile041.png" type="Texture" id=10]
+[ext_resource path="res://Personaje/Principal/tile016.png" type="Texture" id=11]
+[ext_resource path="res://Personaje/Principal/tile019.png" type="Texture" id=12]
+[ext_resource path="res://Personaje/Principal/tile003.png" type="Texture" id=13]
+[ext_resource path="res://Personaje/Principal/tile084.png" type="Texture" id=14]
+[ext_resource path="res://Personaje/Principal/tile018.png" type="Texture" id=15]
+[ext_resource path="res://Personaje/Principal/tile083.png" type="Texture" id=16]
+[ext_resource path="res://Personaje/Principal/tile046.png" type="Texture" id=17]
+[ext_resource path="res://Personaje/Principal/tile080.png" type="Texture" id=18]
+[ext_resource path="res://Personaje/Principal/tile001.png" type="Texture" id=19]
+[ext_resource path="res://Personaje/Principal/tile086.png" type="Texture" id=20]
+[ext_resource path="res://Personaje/Principal/tile043.png" type="Texture" id=21]
+[ext_resource path="res://Personaje/Principal/tile085.png" type="Texture" id=22]
+[ext_resource path="res://Personaje/Principal/tile047.png" type="Texture" id=23]
+[ext_resource path="res://Personaje/Principal/tile002.png" type="Texture" id=24]
+[ext_resource path="res://Personaje/Principal/tile000.png" type="Texture" id=25]
+[ext_resource path="res://Personaje/Principal/tile040.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Characters/Controls.tscn" type="PackedScene" id=27]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 19 ), ExtResource( 24 ), ExtResource( 13 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 3 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Run",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 26 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 21 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 17 ), ExtResource( 23 ) ],
+"loop": false,
+"name": "Death",
+"speed": 10.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Walk",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 14 ), ExtResource( 22 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "WallJumpWall",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "WallJumpJump",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 8.0
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2.8501, -4.14996 )
+frames = SubResource( 1 )
+animation = "Jump"
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.85019, 1.85004 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+smoothing_speed = 8.0
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2( 3, -5 )
+enabled = true
+cast_to = Vector2( -11.2, 0 )
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2( 3, -5 )
+enabled = true
+cast_to = Vector2( 11.2, 0 )
+
+[node name="Controlls" parent="." instance=ExtResource( 27 )]

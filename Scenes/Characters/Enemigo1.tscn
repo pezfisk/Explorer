@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Personaje/Enemigo1/tile009.png" type="Texture" id=1]
+[ext_resource path="res://Personaje/Enemigo1/tile012.png" type="Texture" id=2]
+[ext_resource path="res://Personaje/Enemigo1/tile010.png" type="Texture" id=3]
+[ext_resource path="res://Personaje/Enemigo1/tile011.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Enemy1.gd" type="Script" id=5]
+
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 7.9256
+
+[node name="Enemy1" type="KinematicBody2D"]
+position = Vector2( 3365.39, -209.238 )
+scale = Vector2( 1.5, 1.5 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1.77344, -6.13189 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -1.9314, 1.92836 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="LowLeft" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( -10.7449, 5.60535 )
+enabled = true
+cast_to = Vector2( 0, 5 )
+
+[node name="LowLeft2" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( -6.76978, 6.62064 )
+enabled = true
+cast_to = Vector2( -5, 0 )
+
+[node name="LowRight" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 5.98516, 5.1552 )
+enabled = true
+cast_to = Vector2( 0, 5 )
+
+[node name="LowRight2" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 2.01445, 6.07879 )
+enabled = true
+cast_to = Vector2( 5, 0 )

@@ -1,0 +1,430 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Scenes/Other stuff/SkyIce.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Other stuff/SpikeIce.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Other stuff/Tilemap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Other stuff/orb.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Personaje/Principal/tile017.png" type="Texture" id=5]
+[ext_resource path="res://Personaje/Principal/tile000.png" type="Texture" id=6]
+[ext_resource path="res://Personaje/Principal/tile080.png" type="Texture" id=7]
+[ext_resource path="res://Personaje/Principal/tile084.png" type="Texture" id=8]
+[ext_resource path="res://Personaje/Principal/tile001.png" type="Texture" id=9]
+[ext_resource path="res://Personaje/Principal/tile085.png" type="Texture" id=10]
+[ext_resource path="res://Personaje/Principal/tile002.png" type="Texture" id=11]
+[ext_resource path="res://Personaje/Principal/tile086.png" type="Texture" id=12]
+[ext_resource path="res://Personaje/Principal/tile021.png" type="Texture" id=13]
+[ext_resource path="res://Personaje/Principal/tile083.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/KinematicBody2D.gd" type="Script" id=15]
+[ext_resource path="res://Personaje/Principal/tile004.png" type="Texture" id=16]
+[ext_resource path="res://Personaje/Principal/tile020.png" type="Texture" id=17]
+[ext_resource path="res://Personaje/Principal/tile016.png" type="Texture" id=18]
+[ext_resource path="res://Personaje/Principal/tile019.png" type="Texture" id=19]
+[ext_resource path="res://Personaje/Principal/tile018.png" type="Texture" id=20]
+[ext_resource path="res://Personaje/Principal/tile003.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Other stuff/SkyIceBIG.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Other stuff/WorldComplete.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Scenes/Other stuff/LONGSpike.tscn" type="PackedScene" id=24]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 5 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Correr",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 21 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "WallJumpWall",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "WallJumpJump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 10.0
+} ]
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 8.63, 13.405, -8.678, 13.405, -8.547, -3.561, 0.124, -14.738, 8.456, -3.703 )
+
+[node name="World2" type="Node"]
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 1 )]
+layer = -1
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2( 3.41373, 105.338 )
+z_index = 1
+
+[node name="Node2D" type="Node2D" parent="Player"]
+z_index = 1
+
+[node name="Orb3" parent="Player/Node2D" instance=ExtResource( 4 )]
+position = Vector2( -133.262, -77.9177 )
+z_index = 1
+script = null
+
+[node name="Orb4" parent="Player/Node2D" instance=ExtResource( 4 )]
+position = Vector2( -66.7618, 295.434 )
+z_index = 1
+script = null
+
+[node name="Orb5" parent="Player/Node2D" instance=ExtResource( 4 )]
+position = Vector2( -207.362, 296.384 )
+z_index = 1
+script = null
+
+[node name="Orb6" parent="Player/Node2D" instance=ExtResource( 4 )]
+position = Vector2( -338.463, 295.434 )
+z_index = 1
+script = null
+
+[node name="Orb7" parent="Player/Node2D" instance=ExtResource( 4 )]
+position = Vector2( -338.463, 295.434 )
+z_index = 1
+script = null
+
+[node name="Player" type="KinematicBody2D" parent="Player"]
+position = Vector2( -17.3583, 63.773 )
+z_index = 1
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player/Player"]
+position = Vector2( 2.06413, -2.87184 )
+z_index = 1
+frames = SubResource( 1 )
+animation = "Correr"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Player"]
+visible = false
+position = Vector2( 2.60911, 7.78044 )
+z_index = 1
+shape = SubResource( 2 )
+
+[node name="RayCastLeft" type="RayCast2D" parent="Player/Player"]
+visible = false
+position = Vector2( 3, 7 )
+z_index = 1
+enabled = true
+cast_to = Vector2( -11.2, 0 )
+
+[node name="RayCastRight" type="RayCast2D" parent="Player/Player"]
+visible = false
+position = Vector2( 3, 7 )
+z_index = 1
+enabled = true
+cast_to = Vector2( 11.2, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="Player/Player"]
+position = Vector2( 2, -20 )
+z_index = 1
+rotating = true
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = -10000
+limit_top = -10000
+limit_right = 10000
+limit_bottom = 10000
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 6.0
+drag_margin_left = 0.21
+drag_margin_top = 0.21
+drag_margin_right = 0.21
+drag_margin_bottom = 0.21
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="LONG spikes" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Spike" parent="LONG spikes" instance=ExtResource( 24 )]
+position = Vector2( -173.366, 660.048 )
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+z_index = 1
+tile_data = PoolIntArray( -327688, 3, 65536, -327687, 3, 65537, -327686, 3, 65537, -327685, 3, 65537, -327684, 3, 65537, -327683, 3, 65537, -327682, 3, 65537, -327681, 3, 65537, -393216, 3, 65537, -393215, 3, 65537, -393214, 3, 65537, -393213, 3, 65537, -393212, 3, 65537, -393211, 3, 65537, -393210, 3, 65537, -393209, 3, 65537, -393208, 3, 65538, -262152, 3, 131074, -262151, 3, 131072, -262150, 3, 4, -262149, 3, 4, -262148, 3, 4, -262147, 3, 4, -262146, 3, 4, -262145, 3, 4, -327680, 3, 4, -327679, 3, 4, -327678, 3, 4, -327677, 3, 4, -327676, 3, 4, -327675, 3, 4, -327674, 3, 4, -327673, 3, 131073, -327672, 3, 131075, -196616, 3, 131074, -196615, 3, 131075, -262137, 3, 131074, -262136, 3, 131075, -131080, 3, 131074, -131079, 3, 131075, -196601, 3, 131074, -196600, 3, 131075, -65544, 3, 131074, -65543, 3, 131075, -131065, 3, 131074, -131064, 3, 131075, -8, 3, 131074, -7, 3, 131075, -65529, 3, 131074, -65528, 3, 131075, 65528, 3, 131074, 65529, 3, 131075, 65534, 3, 65536, 65535, 3, 65537, 0, 3, 65537, 1, 3, 65537, 2, 3, 65538, 7, 3, 131074, 8, 3, 131075, 131064, 3, 131074, 131065, 3, 131075, 131070, 3, 3, 131071, 3, 4, 65536, 3, 4, 65537, 3, 131073, 65538, 3, 131075, 65543, 3, 131074, 65544, 3, 131075, 196600, 3, 131074, 196601, 3, 131075, 131073, 3, 131074, 131074, 3, 131075, 131079, 3, 131074, 131080, 3, 131075, 262136, 3, 131074, 262137, 3, 131075, 196609, 3, 131074, 196610, 3, 131075, 196615, 3, 131074, 196616, 3, 131075, 327672, 3, 131074, 327673, 3, 131075, 262145, 3, 131074, 262146, 3, 131075, 262151, 3, 131074, 262152, 3, 131075, 393208, 3, 131074, 393209, 3, 131075, 327681, 3, 131074, 327682, 3, 131075, 327687, 3, 131074, 327688, 3, 131075, 458735, 3, 65536, 458736, 3, 65537, 458737, 3, 65537, 458738, 3, 65537, 458739, 3, 65537, 458740, 3, 65537, 458741, 3, 65537, 458742, 3, 65537, 458743, 3, 65537, 458744, 3, 196609, 458745, 3, 196608, 458746, 3, 65537, 458747, 3, 65537, 458748, 3, 65537, 458749, 3, 65537, 458750, 3, 65537, 458751, 3, 65537, 393216, 3, 65537, 393217, 3, 196609, 393218, 3, 131075, 393223, 3, 131074, 393224, 3, 131075, 524271, 3, 131074, 524272, 3, 131072, 524273, 3, 4, 524274, 3, 4, 524275, 3, 4, 524276, 3, 4, 524277, 3, 4, 524278, 3, 4, 524279, 3, 4, 524280, 3, 4, 524281, 3, 4, 524282, 3, 4, 524283, 3, 4, 524284, 3, 4, 524285, 3, 4, 524286, 3, 4, 524287, 3, 4, 458752, 3, 4, 458753, 3, 4, 458754, 3, 5, 458759, 3, 131074, 458760, 3, 131075, 589807, 3, 131074, 589808, 3, 131075, 524295, 3, 131074, 524296, 3, 131075, 655343, 3, 131074, 655344, 3, 131075, 589831, 3, 131074, 589832, 3, 131075, 720879, 3, 131074, 720880, 3, 196608, 720881, 3, 65537, 720882, 3, 65538, 655367, 3, 131074, 655368, 3, 131075, 786415, 3, 3, 786416, 3, 4, 786417, 3, 131073, 786418, 3, 131075, 720897, 3, 65536, 720898, 3, 65538, 720903, 3, 131074, 720904, 3, 131075, 851953, 3, 131074, 851954, 3, 131075, 786433, 3, 131074, 786434, 3, 131075, 786439, 3, 131074, 786440, 3, 131075, 917489, 3, 131074, 917490, 3, 131075, 851969, 3, 131074, 851970, 3, 131075, 851975, 3, 131074, 851976, 3, 131075, 983025, 3, 131074, 983026, 3, 131075, 917505, 3, 131074, 917506, 3, 131075, 917511, 3, 3, 917512, 3, 5, 1048561, 3, 131074, 1048562, 3, 131075, 983041, 3, 131074, 983042, 3, 131075, 1114097, 3, 131074, 1114098, 3, 131075, 1048577, 3, 131074, 1048578, 3, 131075, 1179633, 3, 131074, 1179634, 3, 131075, 1114113, 3, 131074, 1114114, 3, 131075, 1245169, 3, 3, 1245170, 3, 5, 1179649, 3, 3, 1179650, 3, 5 )
+
+[node name="spikes" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Spike" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -178.589, 168.952 )
+z_index = 1
+
+[node name="Spike2" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -169.136, 42.2719 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike11" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 117.229, 46.5588 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike17" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 119.801, 182.024 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike19" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 201.252, 207.746 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike21" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 202.109, 148.587 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike23" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 203.824, 87.7129 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike15" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 201.252, 266.048 )
+rotation = -1.57079
+z_index = 1
+
+[node name="Spike31" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 202.252, 446.747 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike30" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 203.109, 387.588 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike37" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 117.251, 494.747 )
+rotation = 7.85397
+z_index = 1
+
+[node name="Spike36" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 118.109, 435.588 )
+rotation = 7.85397
+z_index = 1
+
+[node name="Spike29" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 201.824, 326.714 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike35" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 117.251, 553.049 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike52" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 8.25098, 433.747 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike51" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 9.10834, 374.588 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike49" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 8.2511, 492.048 )
+rotation = -1.57079
+z_index = 1
+
+[node name="Spike60" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 8.98608, 580.766 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike59" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 9.84344, 521.606 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike55" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -393.75, 397.746 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike54" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -392.893, 338.587 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike53" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -393.75, 456.048 )
+rotation = -4.71238
+z_index = 1
+
+[node name="Spike56" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -393.75, 491.551 )
+rotation = -4.71238
+z_index = 1
+
+[node name="Spike61" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -392.28, 553.081 )
+rotation = -4.71238
+z_index = 1
+
+[node name="Spike58" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -392.28, 582.703 )
+rotation = -4.71238
+z_index = 1
+
+[node name="Spike3" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -83.9986, 47.9353 )
+rotation = -1.57079
+z_index = 1
+
+[node name="Spike4" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -84.6288, 17.053 )
+rotation = -1.57079
+z_index = 1
+
+[node name="Spike5" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -170.396, 13.9106 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike6" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 115.968, 18.1974 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike12" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 117.683, 211.965 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike16" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 118.54, 153.663 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike18" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 199.991, 179.384 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike20" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 200.849, 120.225 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike22" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 202.563, 59.3516 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike14" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 199.991, 237.686 )
+rotation = -1.57079
+z_index = 1
+
+[node name="Spike27" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 200.991, 418.385 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike26" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 201.848, 359.226 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike34" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 115.991, 466.385 )
+rotation = 7.85397
+z_index = 1
+
+[node name="Spike33" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 116.848, 407.226 )
+rotation = 7.85397
+z_index = 1
+
+[node name="Spike25" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 200.563, 298.352 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike32" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 115.991, 524.687 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike48" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 6.99048, 405.385 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike45" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 6.9906, 463.687 )
+rotation = -1.57079
+z_index = 1
+
+[node name="Spike57" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( 7.72559, 552.404 )
+rotation = 4.71238
+z_index = 1
+
+[node name="Spike50" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -395.011, 369.385 )
+rotation = 1.57079
+z_index = 1
+
+[node name="Spike46" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -395.011, 427.687 )
+rotation = -4.71238
+z_index = 1
+
+[node name="Spike47" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -393.541, 524.719 )
+rotation = -4.71238
+z_index = 1
+
+[node name="Spike8" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -45.8659, -22.769 )
+z_index = 1
+
+[node name="Spike7" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -17.8966, -21.4769 )
+z_index = 1
+
+[node name="Spike10" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -44.277, -106.979 )
+rotation = 3.14159
+z_index = 1
+
+[node name="Spike9" parent="spikes" instance=ExtResource( 2 )]
+position = Vector2( -16.3077, -105.687 )
+rotation = 3.14159
+z_index = 1
+
+[node name="WorldComplete" parent="." instance=ExtResource( 23 )]
+position = Vector2( -453.496, 284.539 )
+z_index = 1
+next_world = "res://Scenes/Maps/World3/World4.tscn"
+
+[node name="ParallaxBackground2" parent="." instance=ExtResource( 22 )]
+scale = Vector2( 100, 100 )
+transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+[connection signal="body_entered" from="Player/Node2D/Orb3" to="Player/Player" method="_on_Orb_body_entered"]
+[connection signal="body_entered" from="Player/Node2D/Orb4" to="Player/Player" method="_on_Orb_body_entered"]
+[connection signal="body_entered" from="Player/Node2D/Orb5" to="Player/Player" method="_on_Orb_body_entered"]
+[connection signal="body_entered" from="Player/Node2D/Orb6" to="Player/Player" method="_on_Orb_body_entered"]
+[connection signal="body_entered" from="Player/Node2D/Orb7" to="Player/Player" method="_on_Orb_body_entered"]

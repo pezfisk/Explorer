@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tiles/SkyIce.png" type="Texture" id=1]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+layer = -128
+scale = Vector2( 1000, 1000 )
+transform = Transform2D( 1000, 0, 0, 1000, 0, 0 )
+scroll_base_scale = Vector2( 0, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2( 0.5, 0.5 )
+
+[node name="Sky" type="Sprite" parent="ParallaxLayer"]
+modulate = Color( 0.819608, 0.819608, 0.819608, 1 )
+position = Vector2( -26.6887, -20.7228 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 1 )

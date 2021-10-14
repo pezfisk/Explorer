@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Other stuff/Tilemap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Other stuff/Sky.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Other stuff/Spike.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Other stuff/LONGSpike.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Other stuff/Checkpoint.tscn" type="PackedScene" id=7]
+
+[node name="World3" type="Node"]
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 147.468, 139.752 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 4 )]
+
+[node name="Sipikes" type="Node" parent="."]
+
+[node name="Spike" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( 209.167, -118.784 )
+
+[node name="Spike3" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( 81.9967, -248.16 )
+
+[node name="Spike8" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -44.9353, -376.289 )
+
+[node name="Spike9" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -209.021, -312.023 )
+
+[node name="Spike10" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -175.396, -312.023 )
+
+[node name="Spike15" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -137.985, -270.211 )
+rotation = 1.57079
+
+[node name="Spike16" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -137.105, -206.833 )
+rotation = 1.57079
+
+[node name="Spike17" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -137.105, -238.082 )
+rotation = 1.57079
+
+[node name="Spike18" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -335.859, -342.392 )
+
+[node name="Spike19" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -365.036, -342.649 )
+
+[node name="Spike20" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -495.368, -470.469 )
+
+[node name="Spike21" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -464.999, -470.028 )
+
+[node name="Spike12" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -201.096, -461.927 )
+rotation = 1.57079
+
+[node name="Spike13" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -201.473, -494.002 )
+rotation = 1.57079
+
+[node name="Spike14" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( -201.85, -524.19 )
+rotation = 1.57079
+
+[node name="Spike4" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( 112.135, -248.16 )
+
+[node name="Spike5" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( 311.325, -241.857 )
+rotation = -4.71238
+
+[node name="Spike6" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( 310.711, -302.406 )
+rotation = -4.71238
+
+[node name="Spike7" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( 311.325, -272.16 )
+rotation = -4.71238
+
+[node name="Spike2" parent="Sipikes" instance=ExtResource( 5 )]
+position = Vector2( 240.46, -118.784 )
+
+[node name="LONG Spike" type="Node" parent="."]
+
+[node name="Spike" parent="LONG Spike" instance=ExtResource( 6 )]
+position = Vector2( -1325.62, 902.673 )
+
+[node name="Spike2" parent="LONG Spike" instance=ExtResource( 6 )]
+position = Vector2( 1137.73, 902.673 )
+
+[node name="Spike3" parent="LONG Spike" instance=ExtResource( 6 )]
+position = Vector2( 3594.73, 907.577 )
+
+[node name="Spike4" parent="LONG Spike" instance=ExtResource( 6 )]
+position = Vector2( -3783.72, 897.353 )
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+tile_data = PoolIntArray( -1048585, 4, 65536, -1048584, 4, 65538, -983049, 4, 131074, -983048, 4, 131075, -917513, 4, 3, -917512, 4, 5, -851984, 4, 65536, -851983, 4, 65538, -786448, 4, 131074, -786447, 4, 131075, -720912, 4, 3, -720911, 4, 5, -655376, 0, 0, -655375, 0, 0, -655362, 4, 65536, -655361, 4, 65537, -720896, 4, 65537, -720895, 4, 65537, -720894, 4, 65537, -720893, 4, 65538, -589836, 4, 65536, -589835, 4, 65538, -589826, 4, 131074, -589825, 4, 131072, -655360, 4, 4, -655359, 4, 4, -655358, 4, 4, -655357, 4, 5, -655353, 4, 65536, -655352, 4, 65538, -524300, 4, 131074, -524299, 4, 131075, -524295, 4, 65536, -524294, 4, 65538, -524290, 4, 131074, -524289, 4, 131075, -589817, 4, 131074, -589816, 4, 131075, -458764, 4, 3, -458763, 4, 5, -458759, 4, 131074, -458758, 4, 131075, -458754, 4, 3, -458753, 4, 5, -524281, 4, 3, -524280, 4, 5, -393223, 4, 3, -393222, 4, 5, -458750, 4, 65536, -458749, 4, 65538, -458741, 4, 65536, -458740, 4, 65538, -458739, 0, 0, -393214, 4, 131074, -393213, 4, 131075, -393205, 4, 131074, -393204, 4, 131075, -327678, 4, 3, -327677, 4, 5, -327669, 4, 131074, -327668, 4, 131075, -327667, 0, 0, -262142, 0, 0, -262141, 0, 0, -262133, 4, 131074, -262132, 4, 131075, -262131, 0, 0, -196602, 4, 65536, -196601, 4, 65538, -196597, 4, 3, -196596, 4, 5, -196595, 0, 0, -131066, 4, 131074, -131065, 4, 131075, -65530, 4, 3, -65529, 4, 5, 65547, 4, 65536, 65548, 4, 65538, 65549, 0, 0, 131083, 4, 131074, 131084, 4, 131075, 131085, 0, 0, 196619, 4, 3, 196620, 4, 5, 196621, 0, 0, 393211, 4, 65536, 393212, 4, 65537, 393213, 4, 65537, 393214, 4, 65537, 393215, 4, 65537, 327680, 4, 65537, 327681, 4, 65537, 327682, 4, 65537, 327683, 4, 65537, 327684, 4, 65537, 327685, 4, 65537, 327686, 4, 65538, 327687, 0, 0, 327688, 0, 65538, 458747, 4, 131074, 458748, 4, 1, 458749, 4, 1, 458750, 4, 1, 458751, 4, 1, 393216, 4, 1, 393217, 4, 1, 393218, 4, 1, 393219, 4, 1, 393220, 4, 1, 393221, 4, 1, 393222, 4, 131075, 393223, 0, 0, 393224, 0, 0, 524283, 4, 3, 524284, 4, 4, 524285, 4, 4, 524286, 4, 4, 524287, 4, 4, 458752, 4, 4, 458753, 4, 4, 458754, 4, 4, 458755, 4, 4, 458756, 4, 4, 458757, 4, 4, 458758, 4, 5, 458760, 0, 0 )
+
+[node name="WorldComplete" parent="." instance=ExtResource( 7 )]
+position = Vector2( 78.6368, -378.484 )
+next_world = "res://Scenes/Maps/World1/World3_2.tscn"
+
+[node name="WorldComplete2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 79.1001, -423.423 )
+next_world = "res://Scenes/Maps/World1/World3_2.tscn"

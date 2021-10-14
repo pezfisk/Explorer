@@ -1,0 +1,248 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Other stuff/Tilemap.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Other stuff/SpikeFire.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Other stuff/LONGSpike.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Other stuff/SkyTutorial.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Other stuff/WorldComplete.tscn" type="PackedScene" id=6]
+
+[node name="World1" type="Node"]
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spike" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( -109.927, 262.998 )
+
+[node name="Spike44" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( -276.25, 299.958 )
+rotation = 4.71238
+
+[node name="Spike45" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( -196.209, 395.122 )
+rotation = 6.28318
+
+[node name="Spike46" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( -142.379, 375.553 )
+rotation = 9.42476
+
+[node name="Spike2" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( -139.368, 178.556 )
+rotation = 1.57079
+
+[node name="Spike3" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( -117.368, 86.0253 )
+rotation = -1.5708
+
+[node name="Spike4" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( -16.2648, 39.8574 )
+rotation = -8.88506e-06
+
+[node name="Spike50" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 48.9622, -9.06289 )
+rotation = 3.14159
+
+[node name="Spike51" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 79.067, -11.5716 )
+rotation = 3.14159
+
+[node name="Spike52" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 117.534, 41.5299 )
+
+[node name="Spike53" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 9.24063, 41.1118 )
+
+[node name="Spike5" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 143.24, 42.0175 )
+rotation = -8.88506e-06
+
+[node name="Spike6" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 242.031, 264.747 )
+rotation = -8.88506e-06
+
+[node name="Spike48" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 272.905, 424.263 )
+rotation = -8.88506e-06
+
+[node name="Spike7" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 304.3, 264.149 )
+rotation = -8.88506e-06
+
+[node name="Spike8" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 271.968, 265.945 )
+rotation = -8.88506e-06
+
+[node name="Spike47" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 302.842, 425.461 )
+rotation = -8.88506e-06
+
+[node name="Spike49" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 480.962, 492.778 )
+rotation = -8.88506e-06
+
+[node name="Spike9" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 244.426, 50.3998 )
+rotation = 1.57078
+
+[node name="Spike10" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 301.905, 136.019 )
+rotation = -1.5708
+
+[node name="Spike11" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 245.624, 217.447 )
+rotation = 1.57078
+
+[node name="Spike12" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 457.576, 182.122 )
+rotation = -1.57081
+
+[node name="Spike18" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 563.232, 202.548 )
+
+[node name="Spike20" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 595.375, 201.917 )
+
+[node name="Spike21" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 625.627, 202.548 )
+
+[node name="Spike19" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 655.617, 200.414 )
+
+[node name="Spike23" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 752.735, 202.922 )
+
+[node name="Spike22" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 782.725, 202.922 )
+
+[node name="Spike54" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 843.786, 47.839 )
+rotation = -1.57079
+
+[node name="Spike55" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 755.912, 400.175 )
+rotation = 1.57079
+
+[node name="Spike56" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 756.112, 432.08 )
+rotation = 1.57079
+
+[node name="Spike25" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 751.561, 456.94 )
+
+[node name="Spike24" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 781.551, 456.94 )
+
+[node name="Spike27" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 815.82, 456.94 )
+
+[node name="Spike26" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 845.809, 456.94 )
+
+[node name="Spike31" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 689.797, 310.313 )
+rotation = 3.14159
+
+[node name="Spike30" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 719.787, 310.313 )
+rotation = 3.14159
+
+[node name="Spike29" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 754.055, 310.313 )
+rotation = 3.14159
+
+[node name="Spike28" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 784.045, 310.313 )
+rotation = 3.14159
+
+[node name="Spike35" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 565.681, 309.432 )
+rotation = 3.14159
+
+[node name="Spike34" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 595.671, 309.433 )
+rotation = 3.14159
+
+[node name="Spike33" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 629.94, 309.432 )
+rotation = 3.14159
+
+[node name="Spike32" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 659.93, 309.433 )
+rotation = 3.14159
+
+[node name="Spike13" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 404.888, 95.9037 )
+rotation = 1.57078
+
+[node name="Spike14" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 528.826, -118.444 )
+rotation = -1.77701e-05
+
+[node name="Spike15" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 498.889, -118.444 )
+rotation = -1.77701e-05
+
+[node name="Spike16" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 564.151, -80.7234 )
+rotation = 1.57078
+
+[node name="Spike17" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 564.75, -50.1879 )
+rotation = 1.57078
+
+[node name="Spike37" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 652.602, 47.677 )
+rotation = 4.71238
+
+[node name="Spike36" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 653.2, 78.2125 )
+rotation = 4.71238
+
+[node name="Spike39" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 654.036, 107.903 )
+rotation = 4.71238
+
+[node name="Spike38" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 654.634, 138.438 )
+rotation = 4.71238
+
+[node name="Spike43" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 561.624, 122.579 )
+rotation = 1.57079
+
+[node name="Spike42" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 562.459, 152.269 )
+rotation = 1.57079
+
+[node name="Spike40" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 563.058, 182.804 )
+rotation = 1.57079
+
+[node name="Spike41" parent="Spikes" instance=ExtResource( 2 )]
+position = Vector2( 654.634, 167.924 )
+rotation = 4.71238
+
+[node name="LongSpike" type="Node" parent="."]
+
+[node name="Spike" parent="LongSpike" instance=ExtResource( 4 )]
+position = Vector2( 420.255, 607.839 )
+
+[node name="Spike2" parent="LongSpike" instance=ExtResource( 4 )]
+position = Vector2( 1656.38, -647.941 )
+rotation = -1.57079
+
+[node name="Spike3" parent="LongSpike" instance=ExtResource( 4 )]
+position = Vector2( -786.918, -679.562 )
+rotation = 1.57079
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -66.7251, 5.58434 )
+
+[node name="WorldComplete" parent="." instance=ExtResource( 6 )]
+position = Vector2( 505.09, 315.95 )
+next_world = "res://Scenes/Maps/World2/World2.tscn"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 5 )]
+
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -2162679, 0, 0, -2097142, 0, 0, -2097141, 0, 0, -2097140, 0, 0, -2097139, 0, 0, -2031607, 0, 0, -2031606, 0, 0, -1900535, 0, 0, -1900534, 0, 0, -1900533, 0, 0, -1900532, 0, 0, -1900531, 0, 0, -262117, 2, 65536, -262116, 2, 65538, -131079, 2, 65536, -131078, 2, 65537, -131077, 2, 65537, -131076, 2, 65537, -131075, 2, 65537, -131074, 2, 65537, -131073, 2, 65537, -196608, 2, 65537, -196607, 2, 65537, -196606, 2, 65537, -196605, 2, 65537, -196604, 2, 65537, -196603, 2, 65537, -196602, 2, 65537, -196601, 2, 65537, -196600, 2, 65537, -196599, 2, 65537, -196598, 2, 65537, -196597, 2, 65537, -196596, 2, 65537, -196595, 2, 65537, -196594, 2, 65537, -196593, 2, 65537, -196592, 2, 65538, -196581, 2, 131074, -196580, 2, 131075, -65543, 2, 131074, -65542, 2, 131072, -65541, 2, 4, -65540, 2, 4, -65539, 2, 4, -65538, 2, 4, -65537, 2, 4, -131072, 2, 4, -131071, 2, 4, -131070, 2, 4, -131069, 2, 4, -131068, 2, 4, -131067, 2, 4, -131066, 2, 4, -131065, 2, 4, -131064, 2, 4, -131063, 2, 4, -131062, 2, 131073, -131061, 2, 131072, -131060, 2, 4, -131059, 2, 4, -131058, 2, 4, -131057, 2, 4, -131056, 2, 5, -131045, 2, 131074, -131044, 2, 131075, -7, 2, 131074, -6, 2, 131075, -65526, 2, 131074, -65525, 2, 131075, -65509, 2, 131074, -65508, 2, 131075, 65529, 2, 131074, 65530, 2, 131075, 10, 2, 131074, 11, 2, 131075, 27, 2, 131074, 28, 2, 131075, 131065, 2, 131074, 131066, 2, 131075, 131069, 2, 65536, 131070, 2, 65538, 65541, 2, 65536, 65542, 2, 65538, 65546, 2, 131074, 65547, 2, 131075, 65551, 2, 65536, 65552, 2, 65538, 65557, 2, 65536, 65558, 2, 65538, 65563, 2, 131074, 65564, 2, 131075, 196601, 2, 131074, 196602, 2, 131075, 196605, 2, 131074, 196606, 2, 196608, 196607, 2, 65537, 131072, 2, 65537, 131073, 2, 65537, 131074, 2, 65537, 131075, 2, 65537, 131076, 2, 65537, 131077, 2, 196609, 131078, 2, 131075, 131082, 2, 131074, 131083, 2, 131075, 131087, 2, 131074, 131088, 2, 131075, 131093, 2, 131074, 131094, 2, 131075, 131099, 2, 131074, 131100, 2, 131075, 262137, 2, 131074, 262138, 2, 131075, 262141, 2, 131074, 262142, 2, 131072, 262143, 2, 4, 196608, 2, 4, 196609, 2, 4, 196610, 2, 4, 196611, 2, 4, 196612, 2, 4, 196613, 2, 131073, 196614, 2, 131075, 196618, 2, 131074, 196619, 2, 131075, 196623, 2, 131074, 196624, 2, 131075, 196629, 2, 131074, 196630, 2, 131075, 196635, 2, 131074, 196636, 2, 131075, 327673, 2, 131074, 327674, 2, 131075, 327677, 2, 131074, 327678, 2, 131075, 262149, 2, 131074, 262150, 2, 131075, 262154, 2, 3, 262155, 2, 5, 262159, 2, 131074, 262160, 2, 131075, 262165, 2, 131074, 262166, 2, 131075, 262171, 2, 131074, 262172, 2, 131075, 393204, 2, 65536, 393205, 2, 65537, 393206, 2, 65537, 393207, 2, 65537, 393208, 2, 65537, 393209, 2, 196609, 393210, 2, 131075, 393213, 2, 131074, 393214, 2, 131075, 327685, 2, 131074, 327686, 2, 131075, 327695, 2, 131074, 327696, 2, 131075, 327701, 2, 131074, 327702, 2, 131075, 327707, 2, 131074, 327708, 2, 131075, 458740, 2, 131074, 458741, 2, 131072, 458742, 2, 4, 458743, 2, 4, 458744, 2, 4, 458745, 2, 4, 458746, 2, 5, 458749, 2, 131074, 458750, 2, 131075, 393217, 2, 65536, 393218, 2, 65538, 393221, 2, 131074, 393222, 2, 131075, 393231, 2, 131074, 393232, 2, 131075, 393237, 2, 131074, 393238, 2, 131075, 393243, 2, 131074, 393244, 2, 131075, 524276, 2, 131074, 524277, 2, 131075, 524285, 2, 131074, 524286, 2, 131075, 458753, 2, 131074, 458754, 2, 131075, 458757, 2, 131074, 458758, 2, 131075, 458762, 2, 65536, 458763, 2, 65537, 458764, 2, 65537, 458765, 2, 65537, 458766, 2, 65537, 458767, 2, 196609, 458768, 2, 196608, 458769, 2, 65537, 458770, 2, 65537, 458771, 2, 65537, 458772, 2, 65537, 458773, 2, 196609, 458774, 2, 196608, 458775, 2, 65537, 458776, 2, 65538, 458779, 2, 131074, 458780, 2, 131075, 589812, 2, 131074, 589813, 2, 131075, 589821, 2, 131074, 589822, 2, 131075, 524289, 2, 131074, 524290, 2, 131075, 524293, 2, 131074, 524294, 2, 131075, 524298, 2, 131074, 524299, 2, 131072, 524300, 2, 4, 524301, 2, 131073, 524302, 2, 131072, 524303, 2, 4, 524304, 2, 4, 524305, 2, 4, 524306, 2, 4, 524307, 2, 4, 524308, 2, 4, 524309, 2, 4, 524310, 2, 4, 524311, 2, 4, 524312, 2, 5, 524315, 2, 131074, 524316, 2, 131075, 655348, 2, 131074, 655349, 2, 131075, 655352, 2, 65536, 655353, 2, 65537, 655354, 2, 65537, 655355, 2, 65537, 655356, 2, 65537, 655357, 2, 196609, 655358, 2, 131075, 589825, 2, 131074, 589826, 2, 131075, 589829, 2, 131074, 589830, 2, 196608, 589831, 2, 65537, 589832, 2, 65537, 589833, 2, 65537, 589834, 2, 196609, 589835, 2, 131075, 589837, 2, 131074, 589838, 2, 131075, 589851, 2, 131074, 589852, 2, 131075, 720884, 2, 131074, 720885, 2, 131075, 720888, 2, 3, 720889, 2, 4, 720890, 2, 4, 720891, 2, 4, 720892, 2, 4, 720893, 2, 4, 720894, 2, 5, 655361, 2, 131074, 655362, 2, 131075, 655365, 2, 3, 655366, 2, 4, 655367, 2, 4, 655368, 2, 4, 655369, 2, 4, 655370, 2, 4, 655371, 2, 5, 655373, 2, 131074, 655374, 2, 131075, 655387, 2, 131074, 655388, 2, 131075, 786420, 2, 131074, 786421, 2, 131075, 720897, 2, 131074, 720898, 2, 131075, 720909, 2, 131074, 720910, 2, 196608, 720911, 2, 65537, 720912, 2, 65538, 720923, 2, 131074, 720924, 2, 131075, 851956, 2, 131074, 851957, 2, 131075, 786433, 2, 131074, 786434, 2, 131075, 786445, 2, 3, 786446, 2, 4, 786447, 2, 4, 786448, 2, 5, 786453, 2, 65536, 786454, 2, 65538, 786459, 2, 131074, 786460, 2, 131075, 917492, 2, 131074, 917493, 2, 196608, 917494, 2, 65537, 917495, 2, 65537, 917496, 2, 65537, 917497, 2, 65537, 917498, 2, 65537, 917499, 2, 65537, 917500, 2, 65537, 917501, 2, 65537, 917502, 2, 65537, 917503, 2, 65537, 851968, 2, 65537, 851969, 2, 196609, 851970, 2, 131075, 851989, 2, 131074, 851990, 2, 131075, 851995, 2, 131074, 851996, 2, 131075, 983028, 2, 3, 983029, 2, 4, 983030, 2, 4, 983031, 2, 4, 983032, 2, 4, 983033, 2, 4, 983034, 2, 4, 983035, 2, 4, 983036, 2, 4, 983037, 2, 4, 983038, 2, 4, 983039, 2, 4, 917504, 2, 4, 917505, 2, 4, 917506, 2, 5, 917512, 2, 65536, 917513, 2, 65538, 917525, 2, 131074, 917526, 2, 131075, 917531, 2, 131074, 917532, 2, 131075, 983048, 2, 131074, 983049, 2, 131075, 983061, 2, 131074, 983062, 2, 196608, 983063, 2, 65537, 983064, 2, 65537, 983065, 2, 65537, 983066, 2, 65537, 983067, 2, 196609, 983068, 2, 131075, 1048584, 2, 3, 1048585, 2, 5, 1048590, 2, 65536, 1048591, 2, 65538, 1048597, 2, 3, 1048598, 2, 4, 1048599, 2, 4, 1048600, 2, 4, 1048601, 2, 4, 1048602, 2, 4, 1048603, 2, 4, 1048604, 2, 5, 1114126, 2, 3, 1114127, 2, 5 )
